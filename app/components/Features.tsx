@@ -22,7 +22,7 @@ const features = [
     },
     {
         name: 'Development is on Progress',
-        description: 'Inventory Dashboard',
+        description: 'Inventory Management Dashboard',
         image: '/images/UnderMaintenances.jpg',
         link: '#',
     },
