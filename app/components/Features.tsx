@@ -23,9 +23,15 @@ const features = [
     {
         name: 'Development is on Progress',
         description: 'Inventory Management Dashboard with AWS',
-        image: '/images/UnderMaintenances.jpg',
+        image: '/images/Maintainance.png',
         link: '#',
     },
+    {
+        name: 'UNDER DEVELOPMENT DEADLINE SEPTEMBER 2025',
+        description: 'Design Ui For Dashboard For School Solutions System. Using NEXT.JS 15 with PostgreSQL, Docker.',
+        image: '/images/ComingSoon.png',
+        link: '#',
+    }
 ];
 
 const Features: React.FC = () => {
