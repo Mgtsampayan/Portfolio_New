@@ -1,47 +1,3 @@
-// 'use client'
-
-// import { useState } from 'react';
-// import { ContactForm } from './ContactForm';
-// import { ContactInfo } from './ContactInfo';
-
-// const Contact: React.FC = () => {
-//     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-
-//     const handleSuccess = () => {
-//         setShowSuccessMessage(true);
-//         setTimeout(() => setShowSuccessMessage(false), 5000); // Hide after 5 seconds
-//     };
-
-//     return (
-//         <section id="contact" className="bg-white dark:bg-gray-800 py-16 px-4 sm:px-6 lg:px-8">
-//             <div className="max-w-7xl mx-auto">
-//                 <div className="text-center">
-//                     <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-//                         Get in Touch
-//                     </h2>
-//                     <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-//                         Have questions about GesSain? We&apos;re here to help. Reach out to us and we&apos;ll respond as soon as possible.
-//                     </p>
-//                 </div>
-
-//                 {showSuccessMessage && (
-//                     <div className="mt-8 p-4 bg-green-50 border border-green-200 text-green-700 rounded-md text-center">
-//                         Thank you for your message! We&apos;ll get back to you soon.
-//                     </div>
-//                 )}
-
-//                 <ContactInfo />
-//                 <ContactForm onSuccess={handleSuccess} />
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default Contact;
-
-
-
-// app/contact/page.tsx
 'use client'
 
 import { useState } from 'react';
@@ -65,14 +21,6 @@ const ContactPage = () => {
         setFieldErrors({});
 
         const form = e.currentTarget;
-        // const formData = new FormData(form);
-
-        // const data = {
-        //     firstName: formData.get("first-name") as string,
-        //     lastName: formData.get("last-name") as string,
-        //     email: formData.get("email") as string,
-        //     message: formData.get("message") as string,
-        // };
 
         // Simulate form submission delay
         await new Promise(resolve => setTimeout(resolve, 1000));
