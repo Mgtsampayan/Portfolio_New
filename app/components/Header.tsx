@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 import { useTheme } from '../contexts/ThemeContext'
 
+const NAV_ITEMS = ['Features', 'About', 'Pricing', 'Contact'];
+
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false)
     const { theme, toggleTheme } = useTheme()
@@ -29,7 +31,7 @@ const Header: React.FC = () => {
                         </button>
                     </div>
                     <nav className="hidden md:flex space-x-10">
-                        {['Features', 'About', 'Pricing', 'Contact'].map((item) => (
+                        {NAV_ITEMS.map((item) => (
                             <Link
                                 key={item}
                                 href={`#${item.toLowerCase()}`}
@@ -79,7 +81,7 @@ const Header: React.FC = () => {
                             </div>
                             <div className="mt-6">
                                 <nav className="grid gap-y-8">
-                                    {['Features', 'About', 'Pricing', 'Contact'].map((item) => (
+                                    {NAV_ITEMS.map((item) => (
                                         <Link
                                             key={item}
                                             href={`#${item.toLowerCase()}`}

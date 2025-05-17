@@ -9,16 +9,19 @@ type Project = {
     status: 'In Progress' | 'Completed' | 'On Hold'
 }
 
+// Mock data to avoid unnecessary re-fetching
+const MOCK_PROJECTS: Project[] = [
+    { id: '1', name: 'Project A', status: 'In Progress' },
+    { id: '2', name: 'Project B', status: 'Completed' },
+    { id: '3', name: 'Project C', status: 'On Hold' },
+];
+
 const Dashboard: React.FC = () => {
     const [projects, setProjects] = useState<Project[]>([])
 
     useEffect(() => {
-        // Fetch projects (in a real app, this would be an API call)
-        setProjects([
-            { id: '1', name: 'Project A', status: 'In Progress' },
-            { id: '2', name: 'Project B', status: 'Completed' },
-            { id: '3', name: 'Project C', status: 'On Hold' },
-        ])
+        // Using the constant instead of recreating the array on each render
+        setProjects(MOCK_PROJECTS)
     }, [])
 
     return (

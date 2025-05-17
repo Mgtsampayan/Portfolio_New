@@ -57,16 +57,10 @@ const Pricing: React.FC = () => {
                         <div key={plan.name} className="relative p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm flex flex-col">
                             <div className="flex-1">
                                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{plan.name}</h3>
-                                {plan.price === 'Custom' ? (
-                                    <p className="mt-4 flex items-baseline text-gray-900 dark:text-white">
-                                        <span className="text-5xl font-extrabold tracking-tight">Custom</span>
-                                    </p>
-                                ) : (
-                                    <p className="mt-4 flex items-baseline text-gray-900 dark:text-white">
-                                        <span className="text-5xl font-extrabold tracking-tight">{plan.price}</span>
-                                        <span className="ml-1 text-xl font-semibold">/Custom</span>
-                                    </p>
-                                )}
+                                <p className="mt-4 flex items-baseline text-gray-900 dark:text-white">
+                                    <span className="text-5xl font-extrabold tracking-tight">{plan.price}</span>
+                                    {plan.price !== 'Custom' && <span className="ml-1 text-xl font-semibold">/month</span>}
+                                </p>
                                 <p className="mt-6 text-gray-500 dark:text-gray-300">{plan.description}</p>
 
                                 <ul role="list" className="mt-6 space-y-6">
@@ -81,10 +75,11 @@ const Pricing: React.FC = () => {
 
                             <a
                                 href="#contact"
-                                className={`mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium ${plan.name === 'Professional'
+                                className={`mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium ${
+                                    plan.name === 'Professional'
                                         ? 'bg-indigo-600 text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600'
                                         : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 dark:bg-gray-700 dark:text-indigo-400 dark:hover:bg-gray-600'
-                                    }`}
+                                }`}
                             >
                                 {plan.name === 'Enterprise' ? 'Contact Me' : 'Start your trial'}
                             </a>

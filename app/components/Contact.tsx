@@ -123,7 +123,12 @@ const ContactPage = () => {
                                 </div>
                             </div>
                             <div className="mt-4 text-base text-gray-700 dark:text-gray-300">
-                                portfolio-using-next15.vercel.ap
+                                <a
+                                    href="https://portfolio-using-nextjs15.vercel.app/"
+                                    className="text-indigo-600 dark:text-indigo-400 hover:underline"
+                                >
+                                    portfolio-using-nextjs15.vercel.app
+                                </a>
                             </div>
                         </div>
                     </div>

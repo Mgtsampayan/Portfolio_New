@@ -37,8 +37,7 @@ const Hero: React.FC = () => {
                     </main>
                 </div>
             </div>
-            {/* <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 relative overflow-hidden"> Added relative for positioning */}
-                <div className="absolute inset-0 bg-[#your_light_blue_hex] opacity-5 mix-blend-mode-soft-light" aria-hidden="true"> {/* Subtle overlay */}
+            <div className="absolute inset-0 opacity-5" aria-hidden="true">
                 <Image
                     src="/images/freelancer.png"
                     alt="Sample project management illustration"
@@ -47,8 +46,7 @@ const Hero: React.FC = () => {
                     className="h-56 min-w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
                     priority
                 />
-                </div>
-            {/* </div> */}
+            </div>
         </section>
     )
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from './contexts/ThemeContext'
-// import { AuthProvider } from './contexts/AuthContext'
 
 export const metadata: Metadata = {
   title: "Sampayan Portfolio Management Solutions",
@@ -15,12 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className=''>
-        {/* <AuthProvider> */}
-          <ThemeProvider >
-            {children}
-          </ ThemeProvider>
-        {/* </AuthProvider> */}
+      <body>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
