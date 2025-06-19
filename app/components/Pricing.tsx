@@ -75,11 +75,10 @@ const Pricing: React.FC = () => {
 
                             <a
                                 href="#contact"
-                                className={`mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium ${
-                                    plan.name === 'Professional'
+                                className={`mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium ${plan.name === 'Professional'
                                         ? 'bg-indigo-600 text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600'
                                         : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 dark:bg-gray-700 dark:text-indigo-400 dark:hover:bg-gray-600'
-                                }`}
+                                    }`}
                             >
                                 {plan.name === 'Enterprise' ? 'Contact Me' : 'Start your trial'}
                             </a>
