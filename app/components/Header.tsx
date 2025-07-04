@@ -9,7 +9,21 @@ const NAV_ITEMS = ['Features', 'About', 'Pricing', 'Contact'];
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false)
-    const { theme, toggleTheme } = useTheme()
+    const { theme, toggleTheme, mounted } = useTheme()
+
+    // Don't show theme toggle until mounted to prevent hydration mismatch
+    const renderThemeToggle = () => {
+        if (!mounted) return null;
+        
+        return (
+            <button
+                onClick={toggleTheme}
+                className="mr-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+            >
+                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+        );
+    };
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 bg-opacity-90 dark:bg-opacity-90 backdrop-blur-md shadow-sm">
@@ -42,12 +56,7 @@ const Header: React.FC = () => {
                         ))}
                     </nav>
                     <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                        <button
-                            onClick={toggleTheme}
-                            className="mr-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
-                        >
-                            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                        </button>
+                        {renderThemeToggle()}
                         <Link
                             href="#contact"
                             className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 transition duration-150 ease-in-out"
@@ -94,12 +103,14 @@ const Header: React.FC = () => {
                             </div>
                         </div>
                         <div className="py-6 px-5 space-y-6">
-                            <button
-                                onClick={toggleTheme}
-                                className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-gray-700 hover:bg-indigo-100 dark:hover:bg-gray-600 transition-colors duration-200"
-                            >
-                                {theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-                            </button>
+                            {mounted && (
+                                <button
+                                    onClick={toggleTheme}
+                                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-gray-700 hover:bg-indigo-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                                >
+                                    {theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+                                </button>
+                            )}
                             <Link
                                 href="#contact"
                                 className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"

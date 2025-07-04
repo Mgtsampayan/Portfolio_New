@@ -43,6 +43,7 @@ const Hero: React.FC = () => {
                     alt="Sample project management illustration"
                     width={1920}
                     height={1080}
+                    quality={85}
                     className="h-56 min-w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
                     priority
                 />
