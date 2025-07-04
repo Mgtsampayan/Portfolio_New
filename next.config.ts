@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   // Optimize production builds
-  swcMinify: true,
+  // swcMinify: true,
   // Configure compiler options
   compiler: {
     // Remove console.log in production
