@@ -34,6 +34,12 @@ const features = [
         description: 'Design Ui For Dashboard For School Solutions System. Using NEXT.JS 15 with PostgreSQL, Docker.',
         image: '/images/ComingSoon.png',
         link: '#',
+    },
+    {
+        name: 'Miascor Logistics 2025',
+        description: 'Miascor Logistics is pioneering a cutting-edge multimodal logistics prototype designed to seamlessly integrate land, air, and sea transport solutions. This prototype supports end-to-end cargo movement, enhancing operational efficiency, visibility, and reliability across the entire supply chain.',
+        image: '/images/miascor-logistics.png',
+        link: 'https://miascor-prototype.vercel.app/',
     }
 ];
 
