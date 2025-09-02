@@ -40,6 +40,12 @@ const features = [
         description: 'Miascor Logistics is pioneering a cutting-edge multimodal logistics prototype designed to seamlessly integrate land, air, and sea transport solutions. This prototype supports end-to-end cargo movement, enhancing operational efficiency, visibility, and reliability across the entire supply chain.',
         image: '/images/miascor-logistics.png',
         link: 'https://miascor-prototype.vercel.app/',
+    },
+    {
+        name: 'Saas For Video Conferencing Under Development',
+        description: 'A state-of-the-art SaaS platform for video conferencing, offering seamless integration with various tools and a user-friendly interface.',
+        image: '/images/SaasProject.png',
+        link: 'https://gessain-saas.vercel.app/',
     }
 ];
 
