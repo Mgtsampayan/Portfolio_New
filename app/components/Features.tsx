@@ -18,7 +18,7 @@ const features = [
         link: 'https://olivarezcollege.vercel.app/',
     },
     {
-        name: 'Under Development Project',
+        name: 'Under Development Project to End to end',
         description: 'An innovative new project currently in development: a Chat LLM powered by Gemini. Stay tuned for updates!',
         image: '/images/ChatWithGemini.png',
         link: 'https://chat-using-gemini.vercel.app/',
@@ -30,7 +30,7 @@ const features = [
         link: '#',
     },
     {
-        name: 'UNDER DEVELOPMENT DEADLINE SEPTEMBER 2025',
+        name: 'UNDER DEVELOPMENT DEADLINE FIRST QUARTER OF 2026',
         description: 'Design Ui For Dashboard For School Solutions System. Using NEXT.JS 15 with PostgreSQL, Docker.',
         image: '/images/ComingSoon.png',
         link: '#',
