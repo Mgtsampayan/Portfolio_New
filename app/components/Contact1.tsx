@@ -95,7 +95,7 @@ export default function Contact(): JSX.Element {
     };
 
     return (
-        <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div id="contact" className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* left: contact details */}
                 <div className="space-y-6">
